@@ -30,9 +30,6 @@ const port = 4000
 
 // // app.use(router)
  
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
 
 app.get('/', (req, res) => {
   res.send('Hey está é minha API e está rodando 🥳')
