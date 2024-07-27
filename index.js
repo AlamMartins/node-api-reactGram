@@ -8,19 +8,21 @@ const app = express()
 const port = process.env.PORT || 4000
 
 
-
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `)
+})
 
 // Configurando JSON e form data response
-app.use(express.json())
-app.use(express.urlencoded({extended:false}))
+// app.use(express.json())
+// app.use(express.urlencoded({extended:false}))
 
-//Resolvendo CORS
+// //Resolvendo CORS
 // app.use(cors({credentials: true, origin: "http://localhost:3000"}));
 
-//Upload directory
+// //Upload directory
 // app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
 
-//DB connection - Conectando o banco de dados
+// //DB connection - Conectando o banco de dados
 // require("./config/db.js")
 
 //routes
@@ -30,10 +32,6 @@ app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req, res) => {
   res.send('Hey this is my API running 🥳')
-})
-
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
 })
 
 // app.get('/about', (req, res) => {
