@@ -23,7 +23,7 @@ app.use(cors({credentials: true, origin: "http://localhost:3000"}));
  app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
 
  //DB connection - Conectando o banco de dados
-//  require("./config/db")
+ require("./config/db.js")
 
 // //routes
 // // const router = require("./routes/Router.js")
@@ -32,7 +32,7 @@ app.use(cors({credentials: true, origin: "http://localhost:3000"}));
  
 
 app.get('/', (req, res) => {
-  res.send('Hey está é minha API e está rodando 🥳')
+  res.send('Olá está é minha API e está rodando 🥳')
 })
 
 app.get('/about', (req, res) => {
