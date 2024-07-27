@@ -20,10 +20,10 @@ const port = process.env.PORT || 4000
 // app.use(cors({credentials: true, origin: "http://localhost:3000"}));
 
  //Upload directory
- app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
+//  app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
 
  //DB connection - Conectando o banco de dados
- require("./config/db.js")
+ require("./config/db")
 
 // //routes
 // // const router = require("./routes/Router.js")
