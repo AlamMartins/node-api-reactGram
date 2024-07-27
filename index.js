@@ -17,7 +17,7 @@ const port = process.env.PORT || 4000
  app.use(express.urlencoded({extended:false}))
 
 //Resolvendo CORS
-app.use(cors({credentials: true, origin: "http://localhost:3000"}));
+// app.use(cors({credentials: true, origin: "http://localhost:3000"}));
 
  //Upload directory
  app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
@@ -35,7 +35,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
+  res.send('Hey this is my API está rodando 🥳')
 })
 
 app.get('/about', (req, res) => {
