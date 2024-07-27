@@ -17,10 +17,10 @@ const port = 4000
  app.use(express.urlencoded({extended:false}))
 
 //Resolvendo CORS
-// app.use(cors({credentials: true, origin: "http://localhost:3000"}));
+app.use(cors({credentials: true, origin: "http://localhost:3000"}));
 
  //Upload directory
-//  app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
+ app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
 
  //DB connection - Conectando o banco de dados
 //  require("./config/db")
