@@ -23,7 +23,7 @@ const port = process.env.PORT || 4000
 //  app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
 
  //DB connection - Conectando o banco de dados
- require("./config/db")
+//  require("./config/db")
 
 // //routes
 // // const router = require("./routes/Router.js")
@@ -35,7 +35,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
-  res.send('Hey this is my API está rodando 🥳')
+  res.send('Hey está é minha API e está rodando 🥳')
 })
 
 app.get('/about', (req, res) => {
